@@ -1,0 +1,9 @@
+@use 'abstracts';
+@use 'components/header';
+@use 'components/body';
+@use 'components/utils';
+
+  
+  .word-display {
+    background: red;
+  }
