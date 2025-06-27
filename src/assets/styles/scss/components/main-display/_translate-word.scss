@@ -1,0 +1,9 @@
+.translate-word {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    &__section {
+        flex: 1;
+    }
+}
