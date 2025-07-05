@@ -1,6 +1,5 @@
 <template>
     <div class="main-display">
-        <p>MAIN DISPLAY BODY</p>
         <div class="main-display__content">
             <div v-if="modelValue === 'translateWord'">
                 <translate-word/>

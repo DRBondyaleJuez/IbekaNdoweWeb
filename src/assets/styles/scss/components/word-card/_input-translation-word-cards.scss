@@ -1,0 +1,82 @@
+@import '../../abstracts/colors.scss';
+@import '../../abstracts/fonts.scss';
+
+.input-translation-word-cards {
+    opacity: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    &.word-cards--selected {
+        opacity: 100%;
+    }
+
+    .word-card-container {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        width: 80%;
+
+        &--input {
+            .word-card {
+                border: 5px solid $color-primary-accent;
+
+                .horizontal-dashed-line {
+                    border-top: 3px dashed $color-primary-accent;
+                }
+
+                p.main-language {
+                    color: $color-primary-accent;
+                }
+
+                p.other-language {
+                    color: $color-secondary-accent;
+                }
+
+                .audio-icon-main-language {
+                    background-image: url('\\assets\\static\\icons\\green-audio-icon.png');
+                }
+
+                .audio-icon-other-language {
+                    background-image: url('\\assets\\static\\icons\\yellow-audio-icon.png');
+                }
+
+                .chevron-icon {
+                    background-image: url('\\assets\\static\\icons\\green-chevron-down-icon.png');
+                }
+            }
+        }
+
+        &--translated {
+            .word-card {
+                border: 5px solid $color-secondary-accent;
+
+                .horizontal-dashed-line {
+                    border-top: 3px dashed $color-secondary-accent;
+                }
+
+                p.main-language {
+                    color: $color-secondary-accent;
+                }
+
+                p.other-language {
+                    color: $color-primary-accent;
+                }
+
+                .audio-icon-main-language {
+                    background-image: url('\\assets\\static\\icons\\yellow-audio-icon.png');
+                }
+
+                .audio-icon-other-language {
+                    background-image: url('\\assets\\static\\icons\\green-audio-icon.png');
+                }
+
+                .chevron-icon {
+                    background-image: url('\\assets\\static\\icons\\yellow-chevron-down-icon.png');
+                }
+            }
+        }
+    }
+}

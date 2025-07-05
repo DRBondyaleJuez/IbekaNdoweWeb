@@ -1,7 +1,7 @@
 <template>
     <div class="language-dropdown-selector">
         <div v-if="selectorTitle" class="language-selector__title">
-            {{ this.selectorTitle }}
+            {{ selectorTitle }}
         </div>
         <select
             id="language-select"
@@ -22,11 +22,8 @@
         name: 'LanguageDropdownSelector',
         data() {
             return {
-                viewCount: 0,
-                statusMessage: 'Ready to display word.',
-                // You could simulate an audio URL here, though in a real app it would likely come from props/API
-                audioUrl: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3', // Example public audio URL
-                options: []
+                options: [],
+                fetchError: null
             };
         },
         props: {
@@ -57,6 +54,7 @@
                     }
 
                     const languageListRaw = await response.json();
+                    debugger;
 
                     if (Array.isArray(languageListRaw)) {
                         this.options = languageListRaw.map(lang => ({
@@ -76,6 +74,10 @@
                     console.error('Error fetching languages:', error);
                     this.fetchError = `Failed to fetch languages: ${error.message}`;
                 }
+            },
+            handleSelectionChange(event) {
+                // Emit the new value back to the parent to update v-model
+               this.$emit('update:modelValue', event.target.value);
             }
         }
     };

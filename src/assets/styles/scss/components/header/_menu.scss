@@ -6,7 +6,10 @@
         justify-content: space-around;
 
         h2 {
+            font-size: 28px;
             text-align: center;
+            flex: 1;
+            border: 2px solid black;
         }
 
         &--active {

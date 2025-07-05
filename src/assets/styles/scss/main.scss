@@ -1,7 +1,9 @@
 @use 'abstracts';
 @use 'components/header';
 @use 'components/main-display';
+@use 'components/word-card';
 @use 'components/utils';
+@use 'base';
 
   
   .word-display {

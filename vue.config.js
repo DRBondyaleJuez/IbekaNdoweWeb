@@ -7,6 +7,11 @@ module.exports = defineConfig({
         target:
         'http://localhost:8081',
         changeOrigin: true
+      },
+      '/api/translated-word-content': {
+        target:
+        'http://localhost:8081',
+        changeOrigin: true
       }
     }
   }

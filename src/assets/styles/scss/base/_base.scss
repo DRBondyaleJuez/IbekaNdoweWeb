@@ -1,0 +1,15 @@
+@import '../abstracts/colors.scss';
+@import '../abstracts/fonts.scss';
+
+body, h3, h2, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: $font-stack-headline;
+}
+
+p, span {
+    font-family: $font-stack-body;
+}

@@ -1,9 +1,82 @@
-.translate-word {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+@import '../../abstracts/colors.scss';
+@import '../../abstracts/fonts.scss';
 
-    &__section {
-        flex: 1;
+.translate-word {
+    margin: 10px 20px;
+
+    &__header {
+        margin-bottom: 20px; 
+        &-selectors {
+            display: flex;
+            flex-direction: row;
+
+        }
+        &-selector {
+            width: 50%;
+            min-width: 150px;
+
+            select {
+                width: 70%;
+                padding: 5px;
+                border: 2px solid black;
+                color: white;
+                border-radius: 4px;
+                font-size: 18px;
+            }
+
+            &--input {
+                select {
+                    background: $color-primary-accent;
+                    color: white;
+                }
+
+            }
+
+            &--translate {
+                select {
+                    background: $color-secondary-accent;
+                    color: black;
+                }
+            }
+        }
+        &-text-input {
+            width: 37.5%;
+            input {
+                margin-top:  10px;;
+                width: 70%;
+                padding: 5px;
+                color: gray;
+                font-size: 18px;
+                border-radius: 4px;
+
+                &:focus {
+                    color: $color-primary-accent;
+                }
+
+                &:visited {
+                    color: $color-primary-accent;
+                }
+            }
+            button {
+                width: 20%;
+                padding: 5px;
+                font-size: 18px;
+                font-weight: 600;
+                border: 2px solid black;
+                border-radius: 4px;
+                background: $color-primary-accent;
+                color: white
+            }
+        }
+    }
+    .translate-word__content {
+        overflow: auto;
+        max-height: 100vh;
+
+        .input-translation-word-card-list-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
     }
 }
