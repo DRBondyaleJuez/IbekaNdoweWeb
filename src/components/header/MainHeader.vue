@@ -11,7 +11,7 @@
             <div class="header__language-dropdown-selector">
                 <LanguageDropdownSelector
                     selector-title = "Website Language:"
-                    @website-language-changed = "HandleWebsiteLanguageChange"
+                    @change = "HandleWebsiteLanguageChange"
                 />
             </div>
         </div>

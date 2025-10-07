@@ -26,7 +26,7 @@
                 </div>
                 <div class="horizontal-dashed-line"></div>
                 <div class="chevron-icon-container">
-                    <img class="chevron-icon" src="../../assets/static/icons/input-word-chevron-down-icon.png">
+                    <img class="chevron-icon" src="../../assets/static/icons/green-chevron-down-icon.png">
                 </div>
             </summary>
 

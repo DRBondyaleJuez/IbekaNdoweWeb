@@ -1,2 +1,7 @@
 @import '_main-display.scss';
 @import '_translate-word.scss';
+
+//Insert Edit Word
+@import './insert-edit-word/insert-edit-word';
+@import './insert-edit-word/_insert-edit-word-sense-fields.scss';
+@import './insert-edit-word/_insert-edit-word-sense-fields-translation.scss'

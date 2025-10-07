@@ -15,7 +15,7 @@
 </template>
 <script>
 import TranslateWord from './TranslateWord.vue';
-import InsertEditWord from './InsertEditWord.vue';
+import InsertEditWord from './insert-edit-word/InsertEditWord.vue';
 import CreateEditTranslation from './CreateEditTranslation.vue';
 
 export default {

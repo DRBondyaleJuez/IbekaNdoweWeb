@@ -22,12 +22,12 @@
         name: 'LanguageDropdownSelector',
         data() {
             return {
+                unfilteredOptions: [],
                 options: [],
                 fetchError: null
             };
         },
         props: {
-            // modelValue is the standard prop name for components that support v-model
             modelValue: {
                 type: String,
                 default: ''
@@ -36,9 +36,18 @@
                 type: String,
                 default: ''
             },
+            languagesToAvoid: {
+                type: Array,
+                default: () => []
+            }
         },
-         created() {
+        created() {
             this.fetchLanguages();
+        },
+        watch: {
+            languagesToAvoid () {
+                this.filterAvoidedOptions();
+            }
         },
         methods: {
             async fetchLanguages() {
@@ -54,20 +63,19 @@
                     }
 
                     const languageListRaw = await response.json();
-                    debugger;
 
                     if (Array.isArray(languageListRaw)) {
                         this.options = languageListRaw.map(lang => ({
                             value: lang, 
                             text: lang
                         }));
+                        this.unfilteredOptions = this.options;
+                        this.filterAvoidedOptions();
                     } else {
                         console.error("API response was not an array:", languageListRaw);
                         this.fetchError = "Data format incorrect: Expected an array of strings.";
                         this.options = []; // Clear options to prevent rendering issues
                     }
-
-                    console.log("Fetched Languages:", this.options);
 
                 } catch (error) {
                     // Catch any network errors or errors thrown above
@@ -76,8 +84,10 @@
                 }
             },
             handleSelectionChange(event) {
-                // Emit the new value back to the parent to update v-model
-               this.$emit('update:modelValue', event.target.value);
+                this.$emit('update:modelValue', event.target.value);
+            },
+            filterAvoidedOptions() {
+                this.options = this.unfilteredOptions.filter(option => !this.languagesToAvoid.includes(option.value));
             }
         }
     };

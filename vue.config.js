@@ -8,11 +8,21 @@ module.exports = defineConfig({
         'http://localhost:8081',
         changeOrigin: true
       },
+        '/api/lexicon-type': {
+        target:
+        'http://localhost:8081',
+        changeOrigin: true
+      },
       '/api/translated-word-content': {
         target:
         'http://localhost:8081',
         changeOrigin: true
-      }
+      },
+      '/api/upsert-word': {
+        target:
+        'http://localhost:8081',
+        changeOrigin: true
+      },
     }
   }
 })

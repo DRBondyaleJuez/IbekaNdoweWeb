@@ -77,9 +77,6 @@
                 const inputLanguage = this.inputLanguage;
                 const outputLanguage = this.outputLanguage;
                 const requestUrl = translationApi + '?searchedWord=' + searchedWord + '&inputLanguage=' + inputLanguage + '&outputLanguage=' + outputLanguage;
-
-                debugger;
-                console.log(requestUrl);
                 
                 try {
                     const response = await fetch(requestUrl);
@@ -95,8 +92,6 @@
                     this.inputWordPhonetic = translationContent.inputWordPhonetic;
                     this.inputWordAudioUrl = translationContent.inputWordAudioUrl;
                     this.translationEntries = translationContent.translationEntries;
-
-                    console.log("translation content:", translationContent);
 
                 } catch (error) {
                     // Catch any network errors or errors thrown above

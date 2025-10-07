@@ -31,6 +31,13 @@
       ></WordCard>
     </div>
   </div>
+  <!--
+   TODO: Join the word-card-containers in div under name input-translation-word-cards--word-found
+    make another div for input-translation-word-cards--word-not-found based on a v-if of the inputWordText
+    or error in response
+    Then also enclose the translated one in div translation--found and a div translation--not-found
+    based on the state of translatedWordDetails.translatedWord
+  -->
 </template>
 
 <script>
