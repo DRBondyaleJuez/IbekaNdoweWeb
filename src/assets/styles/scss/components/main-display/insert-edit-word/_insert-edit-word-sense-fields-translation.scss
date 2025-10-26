@@ -124,7 +124,7 @@
         &-audio {
             &__icons {
                 margin-left: 50px;
-                width: 20%;
+                width: 10%;
                 display: flex;
                 flex-direction: row;
                 gap: 10%;
@@ -136,6 +136,9 @@
                     width: 100%;
                     height: 100%;
                 }
+            }
+            .status-message {
+                margin: auto;
             }
         }
     }

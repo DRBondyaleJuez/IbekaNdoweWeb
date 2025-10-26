@@ -23,6 +23,11 @@ module.exports = defineConfig({
         'http://localhost:8081',
         changeOrigin: true
       },
+      '/api/cloudinary/upload-audio-file': {
+        target:
+        'http://localhost:8081',
+        changeOrigin: true
+      },
     }
   }
 })
